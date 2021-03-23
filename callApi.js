@@ -30,8 +30,7 @@ function call() {
         if (comp == "jfif" || comp == "jpg" || comp == "gif" || comp == "png" || comp == "jpeg") {
             element.innerHTML = `<img src="${data.url}">`;
         }
-        else
-            element.innerHTML = `<video src = "${data.url}" autoplay>`;
+        
 
     }
 
