@@ -28,11 +28,11 @@ function showImages(data) {
 
     let comp = data.url.split(".").pop();
     comp = comp.toLowerCase();
-    if (comp == "jfif" || comp == "jpg" || comp == "gif" || comp == "png" || comp == "jpeg") {
-        element.innerHTML = `<img src="${data.url}">`;
+    if (comp == "mp4") {
+        call();
     }
     else
-        element.innerHTML = `<video src = "${data.url}" autoplay>`;
+        element.innerHTML = `<img src="${data.url}">`;
 
 }
 
