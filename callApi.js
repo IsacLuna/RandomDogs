@@ -1,7 +1,9 @@
-link = "https://random.dog/woof.json"
+let link = "https://random.dog/woof.json";
 
 function call() {
 
+    //document.getElementById("butt").style.display = "none";
+    document.getElementById("spin").style.display = "block";
     document.getElementById("imagen").innerHTML = "";
     let data = undefined;
     let request = new XMLHttpRequest;
@@ -17,6 +19,7 @@ function call() {
             showImages(data);
 
             console.log(data);
+            document.getElementById("spin").style.display = "none";
         }
 
     }
@@ -28,11 +31,16 @@ function showImages(data) {
 
     let comp = data.url.split(".").pop();
     comp = comp.toLowerCase();
-    if (comp == "mp4") {
-        call();
-    }
-    else
-        element.innerHTML = `<img src="${data.url}">`;
+    if(data.fileSizeBytes < 200000){
 
+        if (comp == "mp4" || comp == "webm"){
+            call();
+        }
+        else
+            element.innerHTML = `<img src="${data.url}">`;
+
+    } else
+        call();
+    
 }
 

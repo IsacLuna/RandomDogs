@@ -21,15 +21,23 @@
 
         </div>
 
-        <div style = "text-align: center;">
+        <div style = "text-align: center;" id = "butt">
 
-            <button class = "btn btn-success" onclick = "call()">CLICK ON ME</button>
+            <button type = "button" class = "btn btn-outline-success" onclick = "call()">CLICK ON ME</button>
             <script src = "callApi.js"></script>
 
         </div>
 
-        <!-- <div id = "print"></div> -->
+        <div style="text-align: center;" id = "spin">
+
+            <div class="spinner-grow text-success" role="status" >
+                <span class="visually-hidden">Loading...</span>
+            </div>
+
+        </div>
         
+        <br>
+
         <div style = "text-align: center;">
 
             <div id = "imagen"></div>
@@ -39,3 +47,9 @@
     </body>
 
 </html>
+
+<script>
+
+    document.getElementById("spin").style.display = "none";
+
+</script>
